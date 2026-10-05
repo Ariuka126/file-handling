@@ -6,8 +6,13 @@ def write_shopping_list(items, filename):
             f.write(f"{i}. {item}\n")
 # Exercise 2
 def read_names(filename):
-    # Write your code here
-    pass
+    names = []
+    with open(filename, "r") as f:
+        for line in f:
+            cleaned = line.strip()
+            if cleaned:
+                names.append(cleaned)
+    return names
 
 # Exercise 3
 def append_entry(filename, text):
