@@ -1,9 +1,9 @@
 # You can remove 'pass' if you written code in the function
 # Exercise 1
 def write_shopping_list(items, filename):
-    # Write your code here
-    pass
-
+    with open(filename, "w") as f:
+        for i, item in enumerate(items, start=1):
+            f.write(f"{i}. {item}\n")
 # Exercise 2
 def read_names(filename):
     # Write your code here
